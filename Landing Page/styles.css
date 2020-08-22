@@ -1,0 +1,41 @@
+.body{
+    background-color: aquamarine;
+}
+.mainbody{
+    background-color: aquamarine;color: aliceblue;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.input-work{
+   
+        margin: auto;
+        width: 50%;
+        
+        padding: 10px;
+      
+}
+/* .landphoto{
+    margin: 0 auto;
+    
+} */
+.col-6{
+    float:right;
+}
+.foot{
+    background-color:white;
+    color:goldenrod;
+    text-align: center;
+    font-weight: 600;
+}
+.offers{
+    color:grey;
+}
+button{
+    background-color: gray;
+}
