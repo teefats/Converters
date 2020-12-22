@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'real_estate_pages',
     'listings',
     'realtors',
-    'accounts'
+    'accounts',
+    'contacts'
     
 ]
 
@@ -140,3 +141,10 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.INFO: 'danger'
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'gloti3483@gmail.com'
+EMAIL_HOST_PASSWORD = 'edipisstglkjnxza'
+EMAIL_USE_TLS = True
