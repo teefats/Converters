@@ -1,11 +1,55 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'myparser/styles.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
-    <h1>Whats cracking</h1>
+<body >
+  <div class="container-fluid">
+   {% block content %}
+   <h1>Whats cracking</h1>
+   <table class="table table-bordered table-responsive table-hover table-condensed"> 
+       <tr>
+        <th >Title</th>
+<th>Amazon Price</th>
+</tr>
+    <tr class="success">
+    {% for book in books %}
+  
+     <td class = "col-lg-6 text-primary text-justify list-inline ">{{ book.title }}</td>
+     <td class = " text-muted text-right text-secondary col-lg-6">{{ book.amount }}</td>
+   </tr>
+  
+    {% endfor %}
+</table>
+    <table class="table table-bordered table-responsive table-hover" >
+        <th>Code</th>
+        <th>State</th>
+    
+    {% for abbr, state in state_choices.items %}
+    <tr>
+        <td>{{ abbr }} </td>
+        <td>{{ state }} </td>
+    </tr>
+    {% endfor %}
+</table>
+<table class="table table-bordered table-responsive table-hover" >
+    <th>Title</th>
+
+
+{% for title in booky.title %}
+<tr>
+    <td>{{ title }} </td>
+  
+</tr>
+{% endfor %}
+</table>
+    {% endblock%}
+
+</div>
 </body>
 </html>
